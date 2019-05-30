@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-aws-resource" : "pack-zip"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/awake659/AmazonExample#readme",
   "dependencies": {
     "http": "0.0.0"
+  },
+  "devDependencies": {
+    "pack-zip": "^0.2.2"
   }
 }
