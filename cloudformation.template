@@ -181,7 +181,7 @@ TemplateFormatVersion" : "2010-09-09",
           ". ~/.nvm/nvm.sh"
           "nvm install 10"
           "cd /home/ec2-user\n",
-          "aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/pack-zip /home/ec2-user/pack-zip",
+          "aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip",
         ]]}}
 
       }
