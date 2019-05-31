@@ -15,6 +15,7 @@ pipeline {
      stage('Package') {
         steps {
          sh  "npm run build-aws-resource"
+         sh "ls -la"
          sh "aws s3 cp amazonexample.zip s3://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip"
         }
     }
