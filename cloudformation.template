@@ -33,13 +33,6 @@
 		}
 	},
 	"Resources": {
-		"InstanceProfile": {
-			"Type": "AWS::IAM::InstanceProfile",
-			"Properties": {
-				"Path": "/",
-				"Roles": ["Ec2ToS3Role"]
-			}
-		},
 		"ElasticLoadBalancer": {
 			"Type": "AWS::ElasticLoadBalancing::LoadBalancer",
 			"Metadata": {
@@ -108,7 +101,7 @@
 							". ~/.nvm/nvm.sh\n",
 							"nvm install 10\n",
 							"cd /home/ec2-user\n",
-							"aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip\n",
+							"curl https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip\n",
 							"gunzip -S .zip amazonexample.zip\n",
 							"cd package\n",
 							"nohup node server.js\n"
