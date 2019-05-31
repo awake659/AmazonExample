@@ -22,7 +22,7 @@ pipeline {
     }
      stage('Build') {
          steps {
-          sh 'aws cloudformation create-stack --template-url s3://anthony-bucket-one/cloudformation.template --stack-name anthonyteststack --capabilities CAPABILITY_IAM --region ap-northeast-1\n'
+          sh 'aws cloudformation create-stack --template-url https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/cloudformation.template --stack-name anthonyteststack --capabilities CAPABILITY_IAM --region ap-northeast-1\n'
           sh 'aws cloudformation wait stack-create-complete --stack-name anthonyteststack --region ap-northeast-1'
          }
      }
