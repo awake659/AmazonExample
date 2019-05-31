@@ -1,4 +1,5 @@
-TemplateFormatVersion" : "2010-09-09",
+{
+  "TemplateFormatVersion" : "2010-09-09",
 
   "Description" : "AWS CloudFormation Template. This template installs a highly-available, scalable TestMaker deployment using a multi-az Amazon RDS database instance for storage. ONLY THE EU-WEST-1 AMI ID IS CORRECT!!",
 
@@ -51,7 +52,6 @@ TemplateFormatVersion" : "2010-09-09",
       "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
 
     },
- },
 
 
   "Mappings" : {
@@ -60,7 +60,6 @@ TemplateFormatVersion" : "2010-09-09",
 
       "t2.micro"    : { "Arch" : "64" },
 
-    },
 
     "AWSRegionArch2AMI" : {
 
@@ -177,11 +176,11 @@ TemplateFormatVersion" : "2010-09-09",
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
           "#!/bin/bash\n",
           "yum update -y\n",
-          "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash"
-          ". ~/.nvm/nvm.sh"
-          "nvm install 10"
+          "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash",
+          ". ~/.nvm/nvm.sh",
+          "nvm install 10",
           "cd /home/ec2-user\n",
-          "aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip",
+          "aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip"
         ]]}}
 
       }
@@ -221,7 +220,8 @@ TemplateFormatVersion" : "2010-09-09",
     }
 
   }
-
+}
+}
 }
 
 
