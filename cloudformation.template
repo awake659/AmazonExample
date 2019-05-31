@@ -27,17 +27,13 @@
 			"ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
 		},
 		"Mappings": {
-			"AWSInstanceType2Arch": {
-				"t2.micro": {
-					"Arch": "64"
-				},
-				"AWSRegionArch2AMI": {
-					"ap-northeast-1": {
-						"32": "ami-01fb8e7fdf4174d8c",
-						"64": "ami-01fb8e7fdf4174d8c",
-						"64HVM": "NOT_YET_SUPPORTED"
-					}
-				}
+            "AWSRegionArch2AMI": {
+                 "ap-northeast-1": {
+                     "32": "ami-01fb8e7fdf4174d8c",
+                     "64": "ami-01fb8e7fdf4174d8c",
+                     "64HVM": "NOT_YET_SUPPORTED"
+                 }
+             }
 			},
 			"Resources": {
 				"InstanceProfile": {
