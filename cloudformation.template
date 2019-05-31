@@ -102,16 +102,16 @@
 				"UserData": {
 					"Fn::Base64": {
 						"Fn::Join": ["", [
-                          "#!/bin/bash\n",
-                          "yum update -y\n",
-                          "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash\n",
-                          ". ~/.nvm/nvm.sh\n",
-                          "nvm install 10\n",
-                          "cd /home/ec2-user\n",
-                          "aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip\n",
-                          "gunzip -S .zip amazonexample.zip\n",
-                          "cd package\n",
-                          "nohup node server.js\n"
+							"#!/bin/bash\n",
+							"yum update -y\n",
+							"curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash\n",
+							". ~/.nvm/nvm.sh\n",
+							"nvm install 10\n",
+							"cd /home/ec2-user\n",
+							"aws s3 cp https://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip /home/ec2-user/amazonexample.zip\n",
+							"gunzip -S .zip amazonexample.zip\n",
+							"cd package\n",
+							"nohup node server.js\n"
 						]]
 					}
 				}
@@ -121,8 +121,7 @@
 			"Type": "AWS::EC2::SecurityGroup",
 			"Properties": {
 				"GroupDescription": "Enable HTTP access via port 8081 locked down to the load balancer + SSH access",
-				"SecurityGroupIngress": [
-					{
+				"SecurityGroupIngress": [{
 						"IpProtocol": "tcp",
 						"FromPort": "80",
 						"ToPort": "8081",
