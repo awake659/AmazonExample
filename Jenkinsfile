@@ -16,7 +16,7 @@ pipeline {
         steps {
          sh  "npm run build-aws-resource"
          sh "ls -la"
-            sh " cd | cat .aws/credentials"
+            sh "cat ~/.aws/credentials"
          sh "aws s3 ls"
         // sh "aws s3 cp amazonexample.zip s3://anthony-bucket-one.s3-ap-northeast-1.amazonaws.com/amazonexample.zip"
         }
